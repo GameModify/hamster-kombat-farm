@@ -1,4 +1,4 @@
-// import { cfg } from "./configs.js"
+// import { cfg } from "./configs.ts"
 // import { DbManager } from "./db/db-manager.ts"
 // // import { KeyGenerator } from "./keys/keys-manager.js"
 // import { RequestsManager } from "./request-manager.js"
