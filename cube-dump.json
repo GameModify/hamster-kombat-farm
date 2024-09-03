@@ -1,0 +1,724 @@
+{
+  "log": {
+    "version": "1.2",
+    "creator": {
+      "name": "Reqable",
+      "version": "2.22.0"
+    },
+    "entries": [
+      {
+        "startedDateTime": "2024-09-03T14:57:08.673Z",
+        "time": 384,
+        "request": {
+          "method": "POST",
+          "url": "https://api.gamepromo.io/promo/login-client",
+          "httpVersion": "HTTP/1.1",
+          "cookies": [],
+          "headers": [
+            {
+              "name": "Host",
+              "value": "api.gamepromo.io"
+            },
+            {
+              "name": "User-Agent",
+              "value": "UnityPlayer/2022.3.20f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "deflate, gzip"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "name": "X-Unity-Version",
+              "value": "2022.3.20f1"
+            },
+            {
+              "name": "Content-Length",
+              "value": "152"
+            }
+          ],
+          "queryString": [],
+          "postData": {
+            "mimeType": "application/json",
+            "text": "{\"appToken\":\"d1690a07-3780-4068-810f-9b5bbf2931b2\",\"clientOrigin\":\"android\",\"clientId\":\"ed0e484c-9b07-49d4-9c0c-0df46b5ee09d\",\"clientVersion\":\"1.78.42\"}"
+          },
+          "headersSize": 258,
+          "bodySize": 152,
+          "_status": "completed",
+          "_startTimestamp": 1725375428673845,
+          "_endTimestamp": 1725375428715277
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "httpVersion": "HTTP/1.1",
+          "cookies": [],
+          "headers": [
+            {
+              "name": "Date",
+              "value": "Tue, 03 Sep 2024 14:57:08 GMT"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json;charset=utf-8"
+            },
+            {
+              "name": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "name": "Access-Control-Allow-Headers",
+              "value": "*"
+            },
+            {
+              "name": "Access-Control-Allow-Methods",
+              "value": "*"
+            },
+            {
+              "name": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "name": "Access-Control-Expose-Headers",
+              "value": "*"
+            },
+            {
+              "name": "Access-Control-Exposed-Headers",
+              "value": "*"
+            },
+            {
+              "name": "config-next-update",
+              "value": "2024-09-03T15:00:00.000Z"
+            },
+            {
+              "name": "config-version",
+              "value": "Xp7j46Aog2io_cJUJ1kiHa4cPMbDeguQF2nUsO7M-a0"
+            },
+            {
+              "name": "server-time",
+              "value": "2024-09-03T14:57:08.669Z"
+            },
+            {
+              "name": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "name": "Vary",
+              "value": "Origin"
+            },
+            {
+              "name": "CF-Cache-Status",
+              "value": "DYNAMIC"
+            },
+            {
+              "name": "Report-To",
+              "value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=smuD11yZjVUiOAdsOXEKO%2FDgo7hG8pcm3d38aVqe%2FZ3Vm0fYcPrql6YEElo7ut0VVzpVgaN%2F%2FiPelicUjlEHtSnowq74vjM37QN%2BF0YIsg24yzFnQaVlZP6Th7fPVIg8P2%2Bo\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+            },
+            {
+              "name": "NEL",
+              "value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+            },
+            {
+              "name": "Server",
+              "value": "cloudflare"
+            },
+            {
+              "name": "CF-RAY",
+              "value": "8bd6972bd9f98f40-FRA"
+            },
+            {
+              "name": "Content-Encoding",
+              "value": "gzip"
+            },
+            {
+              "name": "alt-svc",
+              "value": "h3=\":443\"; ma=86400"
+            }
+          ],
+          "content": {
+            "size": 125,
+            "mimeType": "application/json",
+            "text": "{\"clientToken\":\"d1690a07-3780-4068-810f-9b5bbf2931b2:android:ed0e484c-9b07-49d4-9c0c-0df46b5ee09d:8C3iAs7gwoM:1725375428669\"}"
+          },
+          "redirectURL": "",
+          "headersSize": 984,
+          "bodySize": 144,
+          "_status": "completed",
+          "_startTimestamp": 1725375429050679,
+          "_endTimestamp": 1725375429057009
+        },
+      },
+      {
+        "startedDateTime": "2024-09-03T14:57:09.072Z",
+        "time": 266,
+        "request": {
+          "method": "POST",
+          "url": "https://api.gamepromo.io/promo/create-code",
+          "httpVersion": "HTTP/1.1",
+          "cookies": [],
+          "headers": [
+            {
+              "name": "Host",
+              "value": "api.gamepromo.io"
+            },
+            {
+              "name": "User-Agent",
+              "value": "UnityPlayer/2022.3.20f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "deflate, gzip"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer d1690a07-3780-4068-810f-9b5bbf2931b2:android:ed0e484c-9b07-49d4-9c0c-0df46b5ee09d:8C3iAs7gwoM:1725375428669"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "name": "X-Unity-Version",
+              "value": "2022.3.20f1"
+            },
+            {
+              "name": "Content-Length",
+              "value": "50"
+            }
+          ],
+          "queryString": [],
+          "postData": {
+            "mimeType": "application/json",
+            "text": "{\"promoId\":\"b4170868-cef0-424f-8eb9-be0622e8e8e3\"}"
+          },
+          "headersSize": 388,
+          "bodySize": 50,
+          "_status": "completed",
+          "_startTimestamp": 1725375429072349,
+          "_endTimestamp": 1725375429077592
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "httpVersion": "HTTP/1.1",
+          "cookies": [],
+          "headers": [
+            {
+              "name": "Date",
+              "value": "Tue, 03 Sep 2024 14:57:09 GMT"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json;charset=utf-8"
+            },
+            {
+              "name": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "name": "Access-Control-Allow-Headers",
+              "value": "*"
+            },
+            {
+              "name": "Access-Control-Allow-Methods",
+              "value": "*"
+            },
+            {
+              "name": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "name": "Access-Control-Expose-Headers",
+              "value": "*"
+            },
+            {
+              "name": "Access-Control-Exposed-Headers",
+              "value": "*"
+            },
+            {
+              "name": "config-next-update",
+              "value": "2024-09-03T15:00:00.000Z"
+            },
+            {
+              "name": "config-version",
+              "value": "Xp7j46Aog2io_cJUJ1kiHa4cPMbDeguQF2nUsO7M-a0"
+            },
+            {
+              "name": "server-time",
+              "value": "2024-09-03T14:57:08.986Z"
+            },
+            {
+              "name": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "name": "Vary",
+              "value": "Origin"
+            },
+            {
+              "name": "CF-Cache-Status",
+              "value": "DYNAMIC"
+            },
+            {
+              "name": "Report-To",
+              "value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=fjuhVM8ULAOpTu7BqR2lXSdxQ9YK%2F85YYgXaPVJ8BFwMA3lo39vV6SKU6M7fUOBN0OUNPNQSJKGNvmyM9d5JWABiCAnhroBoca%2B77Qhu%2Fh3qrQ8eftw4LVaiOfrMiWvD9FgQ\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+            },
+            {
+              "name": "NEL",
+              "value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+            },
+            {
+              "name": "Server",
+              "value": "cloudflare"
+            },
+            {
+              "name": "CF-RAY",
+              "value": "8bd6972e5d5a8f40-FRA"
+            },
+            {
+              "name": "Content-Encoding",
+              "value": "gzip"
+            },
+            {
+              "name": "alt-svc",
+              "value": "h3=\":443\"; ma=86400"
+            }
+          ],
+          "content": {
+            "size": 38,
+            "mimeType": "application/json",
+            "text": "{\"promoCode\":\"CUBE-XKT-W8LS-XKV9-Z1R\"}"
+          },
+          "redirectURL": "",
+          "headersSize": 978,
+          "bodySize": 75,
+          "_status": "completed",
+          "_startTimestamp": 1725375429331827,
+          "_endTimestamp": 1725375429338298
+        },
+        "cache": {},
+        "timings": {
+          "send": -1,
+          "wait": -1,
+          "receive": -1
+        },
+        "serverIPAddress": "172.67.140.155",
+        "connection": "35",
+        "comment": "",
+        "_id": 14,
+        "_uid": "fe6de0df-9845-4c04-b319-59b567d7f188",
+        "_cid": 35,
+        "_ctime": 1725375428043,
+        "_sid": 2,
+        "_stime": 1725375429072,
+        "_serverAddress": "172.67.140.155",
+        "_serverAddressFamily": 0,
+        "_serverPort": 443,
+        "_clientAddress": "127.0.0.1",
+        "_clientAddressFamily": 0,
+        "_clientPort": 38922,
+        "_app": {
+          "name": "Chain Cube",
+          "id": "com.colobolo.chainball",
+          "path": null,
+          "stackTrace": null
+        }
+      },
+      {
+        "startedDateTime": "2024-09-03T14:58:00.515Z",
+        "time": 440,
+        "request": {
+          "method": "POST",
+          "url": "https://api.gamepromo.io/promo/register-event",
+          "httpVersion": "HTTP/1.1",
+          "cookies": [],
+          "headers": [
+            {
+              "name": "Host",
+              "value": "api.gamepromo.io"
+            },
+            {
+              "name": "User-Agent",
+              "value": "UnityPlayer/2022.3.20f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "deflate, gzip"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer d1690a07-3780-4068-810f-9b5bbf2931b2:android:ed0e484c-9b07-49d4-9c0c-0df46b5ee09d:8C3iAs7gwoM:1725375428669"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "name": "X-Unity-Version",
+              "value": "2022.3.20f1"
+            },
+            {
+              "name": "Content-Length",
+              "value": "149"
+            }
+          ],
+          "queryString": [],
+          "postData": {
+            "mimeType": "application/json",
+            "text": "{\"promoId\":\"b4170868-cef0-424f-8eb9-be0622e8e8e3\",\"eventId\":\"7aa265e8-8506-4a7e-9b3e-c02f29dbffda\",\"eventOrigin\":\"undefined\",\"eventType\":\"cube_sent\"}"
+          },
+          "headersSize": 389,
+          "bodySize": 149,
+          "_status": "completed",
+          "_startTimestamp": 1725375480515967,
+          "_endTimestamp": 1725375480523985
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "httpVersion": "HTTP/1.1",
+          "cookies": [],
+          "headers": [
+            {
+              "name": "Date",
+              "value": "Tue, 03 Sep 2024 14:58:00 GMT"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json;charset=utf-8"
+            },
+            {
+              "name": "Content-Length",
+              "value": "16"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "name": "Access-Control-Allow-Headers",
+              "value": "*"
+            },
+            {
+              "name": "Access-Control-Allow-Methods",
+              "value": "*"
+            },
+            {
+              "name": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "name": "Access-Control-Expose-Headers",
+              "value": "*"
+            },
+            {
+              "name": "Access-Control-Exposed-Headers",
+              "value": "*"
+            },
+            {
+              "name": "config-next-update",
+              "value": "2024-09-03T15:00:00.000Z"
+            },
+            {
+              "name": "config-version",
+              "value": "Xp7j46Aog2io_cJUJ1kiHa4cPMbDeguQF2nUsO7M-a0"
+            },
+            {
+              "name": "server-time",
+              "value": "2024-09-03T14:58:00.582Z"
+            },
+            {
+              "name": "Vary",
+              "value": "Origin"
+            },
+            {
+              "name": "CF-Cache-Status",
+              "value": "DYNAMIC"
+            },
+            {
+              "name": "Report-To",
+              "value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=sR9sWejqOHlP9w4MaI4q9H%2FIJLky3Yx1xeyE0GNr0jdYqvxO6a9iISX%2FhcJhf%2Bc1ciVeGnGPOt4ka1A58WML2jNFtMWBpDUJyiSi2ix6qxYjZwnH3agXu4kpyZyYpkhUYptG\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+            },
+            {
+              "name": "NEL",
+              "value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+            },
+            {
+              "name": "Server",
+              "value": "cloudflare"
+            },
+            {
+              "name": "CF-RAY",
+              "value": "8bd6987029bd8f40-FRA"
+            },
+            {
+              "name": "alt-svc",
+              "value": "h3=\":443\"; ma=86400"
+            }
+          ],
+          "content": {
+            "size": 16,
+            "mimeType": "application/json",
+            "text": "{\"hasCode\":true}"
+          },
+          "redirectURL": "",
+          "headersSize": 923,
+          "bodySize": 16,
+          "_status": "completed",
+          "_startTimestamp": 1725375480950943,
+          "_endTimestamp": 1725375480955091
+        },
+        "cache": {},
+        "timings": {
+          "send": -1,
+          "wait": -1,
+          "receive": -1
+        },
+        "serverIPAddress": "172.67.140.155",
+        "connection": "35",
+        "comment": "",
+        "_id": 15,
+        "_uid": "3f359e72-abad-4639-b13d-d08c101c36dd",
+        "_cid": 35,
+        "_ctime": 1725375428043,
+        "_sid": 3,
+        "_stime": 1725375480515,
+        "_serverAddress": "172.67.140.155",
+        "_serverAddressFamily": 0,
+        "_serverPort": 443,
+        "_clientAddress": "127.0.0.1",
+        "_clientAddressFamily": 0,
+        "_clientPort": 38922,
+        "_app": {
+          "name": "Chain Cube",
+          "id": "com.colobolo.chainball",
+          "path": null,
+          "stackTrace": null
+        }
+      },
+      {
+        "startedDateTime": "2024-09-03T14:58:00.973Z",
+        "time": 330,
+        "request": {
+          "method": "POST",
+          "url": "https://api.gamepromo.io/promo/create-code",
+          "httpVersion": "HTTP/1.1",
+          "cookies": [],
+          "headers": [
+            {
+              "name": "Host",
+              "value": "api.gamepromo.io"
+            },
+            {
+              "name": "User-Agent",
+              "value": "UnityPlayer/2022.3.20f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "deflate, gzip"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer d1690a07-3780-4068-810f-9b5bbf2931b2:android:ed0e484c-9b07-49d4-9c0c-0df46b5ee09d:8C3iAs7gwoM:1725375428669"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "name": "X-Unity-Version",
+              "value": "2022.3.20f1"
+            },
+            {
+              "name": "Content-Length",
+              "value": "50"
+            }
+          ],
+          "queryString": [],
+          "postData": {
+            "mimeType": "application/json",
+            "text": "{\"promoId\":\"b4170868-cef0-424f-8eb9-be0622e8e8e3\"}"
+          },
+          "headersSize": 388,
+          "bodySize": 50,
+          "_status": "completed",
+          "_startTimestamp": 1725375480973656,
+          "_endTimestamp": 1725375480979870
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "httpVersion": "HTTP/1.1",
+          "cookies": [],
+          "headers": [
+            {
+              "name": "Date",
+              "value": "Tue, 03 Sep 2024 14:58:00 GMT"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json;charset=utf-8"
+            },
+            {
+              "name": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "name": "Access-Control-Allow-Headers",
+              "value": "*"
+            },
+            {
+              "name": "Access-Control-Allow-Methods",
+              "value": "*"
+            },
+            {
+              "name": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "name": "Access-Control-Expose-Headers",
+              "value": "*"
+            },
+            {
+              "name": "Access-Control-Exposed-Headers",
+              "value": "*"
+            },
+            {
+              "name": "config-next-update",
+              "value": "2024-09-03T15:00:00.000Z"
+            },
+            {
+              "name": "config-version",
+              "value": "Xp7j46Aog2io_cJUJ1kiHa4cPMbDeguQF2nUsO7M-a0"
+            },
+            {
+              "name": "server-time",
+              "value": "2024-09-03T14:58:00.958Z"
+            },
+            {
+              "name": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "name": "Vary",
+              "value": "Origin"
+            },
+            {
+              "name": "CF-Cache-Status",
+              "value": "DYNAMIC"
+            },
+            {
+              "name": "Report-To",
+              "value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=et7ioGtNIsTBtD0JbcE4XitGafj2d6enfPxuQIE%2FksXnqo%2Bzo3m5%2F%2BmQy%2F8hBDHLULeal0N79VCQ7Ub4bXUrQ%2B%2B64gs%2FbGGxwG2JnIVwcxMIth4Uh1bSADaMgKSgrXD3vOZ5\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+            },
+            {
+              "name": "NEL",
+              "value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+            },
+            {
+              "name": "Server",
+              "value": "cloudflare"
+            },
+            {
+              "name": "CF-RAY",
+              "value": "8bd69872ed6d8f40-FRA"
+            },
+            {
+              "name": "Content-Encoding",
+              "value": "gzip"
+            },
+            {
+              "name": "alt-svc",
+              "value": "h3=\":443\"; ma=86400"
+            }
+          ],
+          "content": {
+            "size": 38,
+            "mimeType": "application/json",
+            "text": "{\"promoCode\":\"CUBE-XKT-W8LS-XKV9-Z1R\"}"
+          },
+          "redirectURL": "",
+          "headersSize": 988,
+          "bodySize": 75,
+          "_status": "completed",
+          "_startTimestamp": 1725375481297727,
+          "_endTimestamp": 1725375481303167
+        },
+        "cache": {},
+        "timings": {
+          "send": -1,
+          "wait": -1,
+          "receive": -1
+        },
+        "serverIPAddress": "172.67.140.155",
+        "connection": "35",
+        "comment": "",
+        "_id": 16,
+        "_uid": "e32c0c15-5e05-44d1-9ec0-0c18506739b2",
+        "_cid": 35,
+        "_ctime": 1725375428043,
+        "_sid": 4,
+        "_stime": 1725375480973,
+        "_serverAddress": "172.67.140.155",
+        "_serverAddressFamily": 0,
+        "_serverPort": 443,
+        "_clientAddress": "127.0.0.1",
+        "_clientAddressFamily": 0,
+        "_clientPort": 38922,
+        "_app": {
+          "name": "Chain Cube",
+          "id": "com.colobolo.chainball",
+          "path": null,
+          "stackTrace": null
+        }
+      }
+    ]
+  }
+}

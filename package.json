@@ -1,6 +1,17 @@
 {
+  "main": "test.ts",
   "dependencies": {
-    "sqlite": "^5.1.1",
-    "sqlite3": "^5.1.7"
+    "@prisma/client": "^5.19.1",
+    "@types/node": "^22.5.1",
+    "crypto": "^1.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "prisma": "^5.19.1"
+  },
+  "scripts": {
+    "seed": "node src/db/seed.ts"
   }
 }
+
