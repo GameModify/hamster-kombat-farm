@@ -13,10 +13,7 @@ export declare type GameKeysInfo = {
     name: string
 }
 
-export declare type GameKeysRequest = {
-    gameInfo: GameKeysInfo
-    count: number
-}
+
 
 export type GameKey = {
     value: string
@@ -29,3 +26,26 @@ export declare type AccountInfo = {
     cookie: object
     headers: object
 }
+
+export type GameClientToken = string | undefined
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
