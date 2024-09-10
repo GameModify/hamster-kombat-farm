@@ -2,20 +2,18 @@ import {randomUUID} from "node:crypto";
 
 import {
     GameAppToken,
-    GameClientId,
+    GameClientId, GameClientToken,
     GameKey,
     GameKeysInfo,
-    GameKeysRequest,
     GamePromoId,
     KeyGeneratedCallback
 } from "../entities"
 
 import {generateClientId, sleep} from "../utils"
+import {MiniGameKeysRequest} from "./entities";
 
 
 
-
-type GameClientToken = string | undefined
 
 export class GeneratorKeysApi {
 
@@ -25,7 +23,7 @@ export class GeneratorKeysApi {
     }
 
 
-    async generateKey(clientToken: GameClientToken, keyInfo: GameKeysRequest, callback: KeyGeneratedCallback){
+    async generateKey(clientToken: GameClientToken, keyInfo: MiniGameKeysRequest, callback: KeyGeneratedCallback){
         let keyAvailable = false
         while (!keyAvailable) {
             //delay
@@ -40,7 +38,7 @@ export class GeneratorKeysApi {
         await callback(gameKey)
     }
 
-    async generateKeys(keyRequest: Array<GameKeysRequest>, callback: KeyGeneratedCallback){
+    async generateKeys(keyRequest: Array<MiniGameKeysRequest>, callback: KeyGeneratedCallback){
         for await (const keyInfo of keyRequest) {
             let countGeneratedKeys = 0
             while (countGeneratedKeys != keyInfo.count) {
