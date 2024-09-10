@@ -13,8 +13,6 @@ export declare type GameKeysInfo = {
     name: string
 }
 
-
-
 export type GameKey = {
     value: string
     gameInfo: GameKeysInfo
