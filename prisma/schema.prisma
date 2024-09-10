@@ -26,6 +26,11 @@ model Keys {
   games   Games   @relation(fields: [game_id], references: [id], onDelete: Cascade, onUpdate: Cascade)
 }
 
+model KeysRequest {
+  id             Int      @id @default(autoincrement())
+  keys_request   String
+  done           Boolean
+}
 
 generator client {
   provider = "prisma-client-js"
