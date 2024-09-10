@@ -1,12 +1,25 @@
+import {MiniGameKey} from "../entities";
+
+
+
+export type MiniGameGeneratorData = any
 
 interface IGameKeyGenerator {
-    sum: (num1: number, num2: number ) => number;
+    generateKey(data: MiniGameGeneratorData): Promise<MiniGameKey | undefined>;
+}
+
+interface IPrivateKeyGenerator {
+    _generateKey(data: MiniGameGeneratorData): Promise<MiniGameKey | undefined>;
 }
 
 export abstract class AbstractGenerator
     implements IGameKeyGenerator {
-    sum(num: number): number {return 1}
 
+    async generateKey(data: MiniGameGeneratorData): Promise<MiniGameKey | undefined> {
+        this._generateKey()
 
+        return
+    }
 }
+
 
