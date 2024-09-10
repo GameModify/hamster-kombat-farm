@@ -1,15 +1,18 @@
 import {DBManager} from "../db/db-manager";
 import {MiniGameKey, MiniGameKeysResult, MiniGamesKeysRequest, MiniGamesKeysResult} from "./entities";
+import {PrismaClient} from "@prisma/client";
 
 
-
+enum MiniGames {
+    Cube
+}
 
 export class MiniGamesKeysGeneratorManager {
-
+    private prisma: PrismaClient;
     dbManager: DBManager
 
     constructor(dbManager: DBManager) {
-
+        this.prisma = new PrismaClient()
         this.dbManager = dbManager;
 
     }
@@ -21,7 +24,7 @@ export class MiniGamesKeysGeneratorManager {
 
     async sendMiniGamesKeysRequest(miniGamesKeysRequest: MiniGamesKeysRequest): Promise<MiniGamesKeysResult>  {
         // todo: Send request to database if not available when keys exist
-        // todo: create table for keysRequst
+
         // todo: if keys exist then return
         let keysResult: MiniGamesKeysResult = []
         return keysResult
