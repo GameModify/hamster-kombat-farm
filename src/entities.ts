@@ -1,23 +1,6 @@
 
 
-export type GameClientId = string
-export type GameAppToken = string
-export type GamePromoId = string
 
-export type KeyGeneratedCallback = (gameKey: GameKey) => Promise<void>;
-
-export declare type GameKeysInfo = {
-    id: number
-    gameAppToken: GameAppToken
-    gamePromoId: GamePromoId
-    name: string
-}
-
-export type GameKey = {
-    value: string
-    gameInfo: GameKeysInfo
-    timestamp: number
-}
 
 export declare type AccountInfo = {
     telegramID: number
@@ -25,7 +8,7 @@ export declare type AccountInfo = {
     headers: object
 }
 
-export type GameClientToken = string | undefined
+
 
 
 

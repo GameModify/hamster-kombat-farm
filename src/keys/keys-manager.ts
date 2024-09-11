@@ -1,11 +1,9 @@
 import {DBManager} from "../db/db-manager";
-import {MiniGameKey, MiniGameKeysResult, MiniGamesKeysRequest, MiniGamesKeysResult} from "./entities";
+import {MiniGameKey, MiniGamesKeysRequest, MiniGamesKeysResult} from "./entities";
 import {PrismaClient} from "@prisma/client";
 
 
-enum MiniGames {
-    Cube
-}
+
 
 export class MiniGamesKeysGeneratorManager {
     private prisma: PrismaClient;

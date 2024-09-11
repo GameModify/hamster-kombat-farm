@@ -1,25 +1,34 @@
-import {GameKeysInfo} from "../entities";
-
-export type MiniGameKey = {
-    id: number
-    value: string
-    timestamp: Date
-    is_used: boolean
+export enum MiniGames {
+    TEST = 0, Cube
 }
 
-export type MiniGameID = number;
+
+export type MiniGameKey = {
+    miniGame: MiniGames
+    value: string
+}
 
 export type MiniGameKeysResult = {
-    gameId: MiniGameID
-    gameName: string
+    miniGame: MiniGames
     keys: Array<MiniGameKey>
 }
 
 export type MiniGamesKeysResult = Array<MiniGameKeysResult>
 
 export declare type MiniGameKeysRequest = {
-    gameInfo: GameKeysInfo
+    miniGame: MiniGames
     count: number
 }
 
 export declare type MiniGamesKeysRequest = Array<MiniGameKeysRequest>
+
+
+export type MiniGameGeneratorData = {
+    appToken: string
+    appPromo: string
+}
+
+export type MiniGameClientId = string
+export type MiniGameAppToken = string
+export type MiniGamePromoId = string
+export type MiniGameClientToken = string
