@@ -1,8 +1,9 @@
 model accounts {
-  id             Int              @id @default(autoincrement())
-  telegram_id    Int
-  username       String
-  mini_game_keys mini_game_keys[]
+  id                   Int              @id @default(autoincrement())
+  telegram_id          Int
+  username             String
+  next_start_timestamp DateTime // todo: check timestamp
+  mini_game_keys       mini_game_keys[]
 }
 
 model mini_game_keys {

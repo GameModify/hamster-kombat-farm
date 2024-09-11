@@ -1,6 +1,3 @@
-
-
-
 export declare type TelegramID = number
 
 export declare type AccountInfo = {

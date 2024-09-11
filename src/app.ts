@@ -1,60 +1,54 @@
-// import { cfg } from "./configs.ts"
-// import { DbManager } from "./db/db-manager.ts"
-// // import { KeyGenerator } from "./keys/keys-manager.ts"
-// import { RequestsManager } from "./request-manager.js"
-// import { Game } from "./game.js"
-
-
-
-import {generateClientId, sleep} from "./utils";
-import {GeneratorKeysApi} from "./keys/api";
 import {DBManager} from "./db/db-manager"
-import {GameClientId, GameKey, GameKeysInfo, KeyGeneratedCallback} from "./entities";
-import {MiniGameKeysRequest} from "./keys/entities";
-
+import {MiniGamesKeysGeneratorManager} from "./keys/keys-manager";
+import {getLogger, sleep} from "./utils";
+import {cfg} from "./configs";
+import {AccountManager} from "./account-manager";
 
 class App {
 
-    _activeAccounts = []
-    private dbManager: DBManager;
+    private _activeAccounts: Array<AccountManager> = []
+    private _isWork: boolean = true;
+    private readonly _dbManager: DBManager;
+    private readonly _keyGenerator: MiniGamesKeysGeneratorManager;
+    public logger = getLogger()
 
     constructor() {
-        this.dbManager = new DBManager()
-        // this.keyGenerator = new KeyGenerator(this.dbManager)
-        // this.requestsManager = new RequestsManager(this.dbManager)
-        // this.game = new Game()
+        this._dbManager = new DBManager()
+        this._keyGenerator = new MiniGamesKeysGeneratorManager()
     }
 
     async start() {
-        console.log("start")
-        const api = new GeneratorKeysApi()
+        this.logger.log("start App")
 
-        const clientId: GameClientId = 'd28721be-fd2d-4b45-869e-9f253b554e50:deviceid:1725056593709-5104638609976827085:8BXcQIO8Bq6:1725056559877'
-        const gameInfo: GameKeysInfo = {gameAppToken: '82647f43-3f87-402d-88dd-09a90025313f', gamePromoId: 'c4480ac7-e178-4973-8061-9ed5b2e17954', id: 0, name: "Mow"}
-        const gameKeysRequest : Array<MiniGameKeysRequest> = [
-            {count: 5, gameInfo: gameInfo}
-        ]
-
-        await api.generateKeys(gameKeysRequest, this.writeKeyForDB)
-
-        // while (true) {
-        //     try {
-        //         if (this.#activeAccounts.length < cfg.maxActiveAccountsCount)
-        //         await sleep(1)
-        //
-        //
-        //     } catch (error) {
-        //         console.error(error)
-        //         break
-        //     }
-        // }
-
+        while (this._isWork) {
+            try {
+                await this.loadAccounts()
+                this.logger.log(`loaded ${this._activeAccounts.length} accounts`)
+                await sleep(30000);
+            } catch (error) {
+                console.error(error)
+                break
+            }
+        }
+        this.logger.warn("the farm was stopped")
     }
 
-    async writeKeyForDB(gameKey: GameKey) {
+    async loadAccounts() {
+        if (this._activeAccounts.length === cfg.maxActiveAccountsCount) return
+        const availableAccounts = await this._dbManager.getAvailableAccount()
+        for (const account of availableAccounts) {
+            this._activeAccounts.push(new AccountManager(account, this.unloadAccount, this.onAccountError));
+            if (this._activeAccounts.length === cfg.maxActiveAccountsCount) return
+        }
+    }
 
-        console.log("got key", gameKey.value)
+    unloadAccount(account: AccountManager) {
+        this._activeAccounts = this._activeAccounts.filter((e) => e !== account)
+    }
 
+    onAccountError(account: AccountManager, error: Error) {
+        this.logger.log(`ERROR: `, error)
+        this._isWork = false;
     }
 }
 
