@@ -9,7 +9,7 @@ export abstract class AbstractGenerator {
     protected abstract PROMO_ID: MiniGamePromoId;
 
     protected _api: GeneratorKeysApi
-    protected _headers: object
+    protected _gameHeaders: object
     public logger = getLogger()
     public sleepTimeMs: number = 10000
 
@@ -17,12 +17,9 @@ export abstract class AbstractGenerator {
     protected abstract _generateKey(): Promise<MiniGameKey>
     protected abstract _emulateProgress(clientToken: MiniGameClientToken): Promise<boolean>
 
-    constructor(headers: object) {
-        this._headers = headers
-    }
-
-    init() {
-        this._api = new GeneratorKeysApi({appToken: this.APP_TOKEN, appPromo: this.APP_TOKEN})
+    constructor(gameHeaders: object) {
+        this._gameHeaders = gameHeaders
+        this._api = new GeneratorKeysApi()
     }
 
     async generateKey(data: MiniGameGeneratorData): Promise<MiniGameKey> {
