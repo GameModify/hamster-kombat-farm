@@ -1,35 +1,23 @@
-model Clients {
-  id          Int     @id @default(autoincrement())
-  value       String
-  telegram_id Int
-  keys        Keys[]
-  client_id   String
+model accounts {
+  id             Int              @id @default(autoincrement())
+  telegram_id    Int
+  username       String
+  mini_game_keys mini_game_keys[]
 }
 
-model Games {
-  id          Int     @id @default(autoincrement())
-  name        String
-  app_token   String
-  promo_value String
-  keys        Keys[]
+model mini_game_keys {
+  id           Int    @id @default(autoincrement())
+  account_id   Int
+  mini_game_id Int
+  value        String
+
+  clients accounts @relation(fields: [account_id], references: [id], onDelete: Cascade, onUpdate: Cascade)
 }
 
-model Keys {
-  id        Int      @id @default(autoincrement())
-  client_id Int
-  game_id   Int
-  value     String
-  timestamp DateTime
-  is_used   Boolean
-
-  clients Clients @relation(fields: [client_id], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  games   Games   @relation(fields: [game_id], references: [id], onDelete: Cascade, onUpdate: Cascade)
-}
-
-model KeysRequest {
-  id             Int      @id @default(autoincrement())
-  keys_request   String
-  done           Boolean
+model mini_game_keys_requests {
+  id           Int @id @default(autoincrement())
+  mini_game_id Int
+  count        Int
 }
 
 generator client {

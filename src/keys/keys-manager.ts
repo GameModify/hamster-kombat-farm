@@ -1,30 +1,27 @@
-import {DBManager} from "../db/db-manager";
 import {MiniGameKey, MiniGamesKeysRequest, MiniGamesKeysResult} from "./entities";
-import {PrismaClient} from "@prisma/client";
-
-
+import {DBKeysManager} from "./db-keys";
 
 
 export class MiniGamesKeysGeneratorManager {
-    private prisma: PrismaClient;
-    dbManager: DBManager
+    dbManager: DBKeysManager
 
-    constructor(dbManager: DBManager) {
-        this.prisma = new PrismaClient()
-        this.dbManager = dbManager;
+    constructor() {
+        this.dbManager = new DBKeysManager();
 
     }
 
-    async tick(){
+    async tick() : Promise<boolean> {
         // todo: Get keys request from db and generate
-        return
+        // todo: return false if not need generate keys
+        return false
     }
 
-    async sendMiniGamesKeysRequest(miniGamesKeysRequest: MiniGamesKeysRequest): Promise<MiniGamesKeysResult>  {
+    async getMiniGamesKeys(miniGamesKeysRequest: MiniGamesKeysRequest): Promise<MiniGamesKeysResult>  {
         // todo: Send request to database if not available when keys exist
 
         // todo: if keys exist then return
         let keysResult: MiniGamesKeysResult = []
+
         return keysResult
     }
 
@@ -33,6 +30,15 @@ export class MiniGamesKeysGeneratorManager {
         // todo: else if key is invalid then request to generate new key for next iteration
 
         return
+    }
+
+    static checkNeedGeneration(keysRequests: MiniGamesKeysRequest, keysResult: MiniGamesKeysResult) : boolean {
+        if (keysRequests.length !== keysResult.length) return true
+        for (let i = 0; i < keysRequests.length; i++) {
+            let miniGameKeys = keysResult.filter((element) => {element.miniGame = keysRequests[i].miniGame})
+            if (!miniGameKeys || miniGameKeys.length !== keysRequests[i].count) return true
+        }
+        return false
     }
 }
 
