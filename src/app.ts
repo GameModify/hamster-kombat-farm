@@ -35,7 +35,7 @@ class App {
 
     async loadAccounts() {
         if (this._activeAccounts.length === cfg.maxActiveAccountsCount) return
-        const availableAccounts = await this._dbManager.getAvailableAccount()
+        const availableAccounts = await this._dbManager.getAvailableAccounts()
         for (const account of availableAccounts) {
             this._activeAccounts.push(new AccountManager(account, this.unloadAccount, this.onAccountError));
             if (this._activeAccounts.length === cfg.maxActiveAccountsCount) return
