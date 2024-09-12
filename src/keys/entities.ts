@@ -9,7 +9,9 @@ export type MiniGameKey = {
 }
 
 export type MiniGameKeysResult = {
-    miniGame: MiniGames
+    id?: number
+    mini_game_id: MiniGames;
+    count: number
     keys: Array<MiniGameKey>
 }
 
@@ -18,6 +20,7 @@ export type MiniGamesKeysResult = Array<MiniGameKeysResult>
 export declare type MiniGameKeysRequest = {
     miniGame: MiniGames
     count: number
+    telegram_id: number
 }
 
 export declare type MiniGamesKeysRequest = Array<MiniGameKeysRequest>
